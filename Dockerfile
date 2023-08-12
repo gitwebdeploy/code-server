@@ -29,7 +29,7 @@ RUN code-server --install-extension esbenp.prettier-vscode
 # Install apt packages:
 RUN sudo apt-get install -y nodejs
 RUN sudo apt-get install -y npm
-RUN sudo npm i -g nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 RUN sudo nvm i 18
 
 
