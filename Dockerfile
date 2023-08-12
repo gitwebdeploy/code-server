@@ -27,7 +27,6 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN code-server --install-extension esbenp.prettier-vscode
 
 # Install apt packages:
-RUN sudo apt-get install -y ubuntu-make
 RUN sudo apt-get install -y nodejs
 RUN sudo apt-get install -y npm
 RUN sudo npm i -g nvm
