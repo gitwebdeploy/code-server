@@ -30,6 +30,11 @@ RUN code-server --install-extension esbenp.prettier-vscode
 RUN sudo apt-get install -y nodejs
 RUN sudo apt-get install -y npm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+RUN export NVM_DIR="$HOME/.nvm"
+RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+
 RUN sudo nvm i 18
 
 
